@@ -6,9 +6,10 @@ import { MathematicalFunction } from "./classes/mathematics.js"
 import { RaiseTo } from "./classes/power.js"
 import { Brackets } from "./classes/bracket.js"
 import { Trigonometry } from "./classes/trigonometry.js"
-import { MemoryOperation, clickclr, memoryCheck, memory } from "./classes/memory.js"
+import { MemoryOperation, clickclr, memoryCheck } from "./classes/memory.js"
 
 memoryCheck();
+//Screen Variables
 export var showOnScreen = document.getElementById('display')! as HTMLInputElement;
 showOnScreen.style.display = "block";
 export var showOnScreen2 = document.getElementById('display2')! as HTMLInputElement;
@@ -17,6 +18,7 @@ export var PIE: Number = Math.PI;
 
 clickclr();
 
+//Numericals Operations
 var printvalue = new Numericals();
 let numbers = document.querySelectorAll('.numbers');
 for (let elements of numbers) {
@@ -25,6 +27,7 @@ for (let elements of numbers) {
     });
 }
 
+//Arithmetic Operations
 var arithmeticOperation = new ArithmeticOperation();
 let operation = document.querySelectorAll('.arith');
 for (let elements of operation) {
@@ -33,7 +36,7 @@ for (let elements of operation) {
     });
 }
 
-
+//Clear values operations
 var clearValue = new ClearValue();
 let clear = document.querySelectorAll('.clr');
 for (let elements of clear) {
@@ -42,6 +45,7 @@ for (let elements of clear) {
     });
 }
 
+//change value on clicking 2nd
 var revertValue = new RevertValues();
 let revert = document.querySelectorAll('#twoo');
 for (let elements of revert) {
@@ -50,8 +54,7 @@ for (let elements of revert) {
     });
 }
 
-
-
+//Mathematical Operations
 var mathematicalFunction = new MathematicalFunction();
 let functions = document.querySelectorAll('.mathematics');
 for (let elements of functions) {
@@ -60,7 +63,7 @@ for (let elements of functions) {
     });
 }
 
-
+//Brackets Operations
 var brackets = new Brackets();
 let bracket = document.querySelectorAll('.brackets');
 for (let elements of bracket) {
@@ -69,15 +72,14 @@ for (let elements of bracket) {
     });
 }
 
+//Factorial function
 document.getElementById("factorial").addEventListener('click', function () {
     factorialResult(showOnScreen.value);
 });
-
 function factorialResult(n:string):void {
     var result = factorial(Number(n));
     showOnScreen.value = result;
 }
-//Factorial function
 function factorial(x:number):any {
     if (x == 0 || x == 1) {
         return 1;
@@ -92,7 +94,7 @@ function factorial(x:number):any {
     }
 }
 
-
+//Raise to operations
 var raiseTo = new RaiseTo();
 let raise = document.querySelectorAll('.pow');
 for (let elements of raise) {
@@ -101,6 +103,7 @@ for (let elements of raise) {
     });
 }
 
+//Trigonometry Operations
 var trigo = new Trigonometry();
 let trigono = document.querySelectorAll('.trigo');
 for (let elements of trigono) {
@@ -109,6 +112,7 @@ for (let elements of trigono) {
     });
 }
 
+//Memory Operation
 var memoryvalue = new MemoryOperation();
 let mem = document.querySelectorAll('.memory');
 for (let elements of mem) {

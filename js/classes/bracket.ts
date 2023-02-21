@@ -11,6 +11,7 @@ export class Brackets {
                 count++;
                 document.getElementById("cnt").innerHTML = count.toString();
                 break;
+
             case "closeBracket":
                 let lastValue = showOnScreen.value[showOnScreen.value.length - 1];
                 if (count > 0) {
@@ -36,11 +37,8 @@ export class Brackets {
         }
     }
 }
-
 function setBracket(value:number)
 {
     count = value;
 }
-
-    
 export {count, setBracket };

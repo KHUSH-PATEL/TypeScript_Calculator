@@ -1,5 +1,4 @@
 import { showOnScreen } from "../function.js";
-import { ClearValue } from "./clearvalue.js"
 // var clearValue = new ClearValue();
 export var memory: any = [];
 var count:number;
