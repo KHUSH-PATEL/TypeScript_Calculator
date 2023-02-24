@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <form action="" id="calculator" name="calculator">
+        <div class="calculator-body">
+            <!-- Top Part of Calculator Start-->
+            <div class="top-part">
+
+                <input type="text" name="display2" id="display2" readonly>
+                <input type="text" name="display" id="display" readonly>
+
+                <input type="button" value="DEG" class="top-item">
+                <input type="button" value="F-E" id="exponential" class="top-item arith">
+                <input type="button" value="" class="top-item">
+                <input type="button" value="" class="top-item">
+                <input type="button" value="" class="top-item">
+
+                <input type="button" value="MC" id="memoryClear" class="top-item memory">
+                <input type="button" value="MR" id="memoryResult" class="top-item memory">
+                <input type="button" value="M+" id="memoryPlus" class="top-item memory">
+                <input type="button" value="M-" id="memorySub" class="top-item memory">
+                <input type="button" value="MS" id="memoryStore" class="top-item memory">
+                <!-- Top Part of Calculator Ends-->
+
+                <!-- Bottom part of Calculator Starts -->
+                <button id="dropdown1" type="button" class="btn dropdown-toggle top-item" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="https://img.icons8.com/ios-glyphs/30/null/trigonometry.png " />
+                    <span class="fun">Trigonometery</span>
+                </button>
+                <ul class="dropdown-menu p-2" aria-labelledby="dropdown1">
+                    <div class="row row-cols-3 g-0">
+                        <li><button type="button" class="btn w-75 border border-2 mb-3 trigo" id="sin">sin</button>
+                        </li>
+                        <li><button type="button" class="btn w-75 border border-2 trigo" id="cos">cos</button></li>
+                        <li><button type="button" class="btn w-75 border border-2 trigo" id="tan">tan</button></li>
+                        <li><button type="button" class="btn w-75 border border-2 trigo" id="sec">sec</button>
+                        </li>
+                        <li><button type="button" class="btn w-75 border border-2 trigo" id="cosec">csc</button>
+                        </li>
+                        <li><button type="button" class="btn w-75 border border-2 trigo" id="cot">cot</button>
+                        </li>
+                    </div>
+                </ul>
+                <button type="button" id="dropdown2" class="btn dropdown-toggle top-item" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="https://img.icons8.com/ios-glyphs/30/null/frequency-f.png" />
+                    <span class="fun">Functions</span></button>
+                <ul class="dropdown-menu p-2" aria-labelledby="dropdown2">
+                    <div class="row row-cols-3 g-0">
+                        <li><button type="button" class="btn border border-2 mathematics" id="floor">⌊x⌋</button>
+                        </li>
+                        <li><button type="button" class="btn border border-2 mathematics" id="ceil">⌈x⌉</button></li>
+                        <li><button type="button" class="btn border border-2 mathematics" id="mod">| x |</button></li>
+                    </div>
+                </ul>
+            </div>
+            <!-- Top Part of Calculator Ends-->
+
+            <!-- Bottom part of Calculator Starts -->
+            <input type="button" value="2nd" id="twoo" class="item">
+
+            <input type="button" value="&#x1D7B9;" id="pi" class="item arith">
+            <input type="button" value="e" id="ex" class="item arith">
+            <input type="button" value="C" id="clickclr" class="item clr">
+            <button type="button" class="item clr" id="backSpace"><img src="./icon/backspace.png"
+                    style="height: 23px; width: 23px;"></button>
+
+            <button type="button" id="square" class="item arith">x<sup>2</sup></button>
+            <button type="button" style="display:none;" id="cube" class="item arith">x<sup>3</sup></button>
+
+            <input type="button" value="1/x" id="inverse" class="item arith">
+            <input type="button" value="| x |" id="mod" class="item mathematics">
+            <input type="button" value="exp" id="exponential" class="item arith">
+            <input type="button" value="mod" id="modulo" class="item arith">
+
+            <button type="button" id="squareRoot" class="item arith"><sup>2</sup>&#8730x</button>
+            <button type="button" style="display:none;" id="cubeRoot" class="item arith"><sup>3</sup>&#8730x</button>
+
+            <button type="button" value="(" id="openBracket" class="item brackets">( <span id="cnt"></span></button>
+            <input type="button" value=")" id="closeBracket" class="item brackets">
+            <input type="button" value="n!" id="factorial" class="item">
+            <input type="button" value="÷" id="division" class="item arithmatic arith">
+
+            <button type="button" id="xySquare" class="item pow"><sub>x</sub><sup>y</sup></button>
+            <button type="button" style="display:none;" id="yRootx" class="item pow"><sup>y</sup>&#8730x</button>
+
+            <input type="button" name="" value="7" id="seven" class="item numbers">
+            <input type="button" name="" value="8" id="eight" class="item numbers">
+            <input type="button" name="" value="9" id="nine" class="item numbers">
+            <input type="button" value="&#215;" id="multiplication" class="item arithmatic arith">
+
+            <button type="button" id="xTimes10" class="item pow">10<sup>x</sup></button>
+            <button type="button" style="display:none;" id="twoRaiseX" class="item pow">2<sup>x</sup></button>
+
+            <input type="button" name="" value="4" id="four" class="item numbers">
+            <input type="button" name="" value="5" id="five" class="item numbers">
+            <input type="button" name="" value="6" id="six" class="item numbers">
+            <input type="button" name="" value="-" id="substraction" class="item arithmatic arith">
+
+            <button type="button" id="log" class="item pow">log</button>
+            <button type="button" style="display:none;" id="logyx" class="item pow">log<sub>y</sub><sup>x</sup></button>
+
+            <input type="button" name="" value="1" id="one" class="item numbers">
+            <input type="button" name="" value="2" id="two" class="item numbers">
+            <input type="button" name="" value="3" id="three" class="item numbers">
+            <input type="button" name="" value="+" id="addition" class="item arithmatic arith">
+
+            <button type="button" id="logE" class="item pow">ln</button>
+            <button type="button" style="display:none;" id="EraiseX" class="item pow">e<sup>x</sup></button>
+
+            <input type="button" value="+/-" id="inverseValue" class="item arith">
+            <input type="button" name="" value="0" id="zero" class="item numbers">
+            <button type="button" id="operator" class="item arith"><strong>.</strong></button>
+            <input type="button" name="" value="=" id="clickequ" class="item arithmatic arith equal">
+            <!-- Bottom part of Calculator Ends -->
+
+        </div>
+    </form>
+</body>
+<script type="module" src="./js/function.js"></script>
+
+</html>
